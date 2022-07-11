@@ -14,6 +14,13 @@
 
             @endif
 
+
+            @if ($post->tags)
+                @foreach ($post->tags as $tag)
+                <span class="badge rounded-pill text-light bg-primary">{{$tag->tag_name}}</span>
+                @endforeach
+            @endif
+
             <p class="card-text">{{$post->contenet}}</p>
 
             <a href="{{route('admin.posts.index')}}" class="btn btn-primary">Go Back</a>
