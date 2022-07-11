@@ -7,10 +7,17 @@ use Illuminate\Support\Str;
 
 class Post extends Model
 {
-
+    // Relazione one to may
     public function category(){
         return $this->belongsTo('App\Category');
     }
+
+    // Relazione many to many
+
+    public function tags(){
+        return $this-> belongsToMany('App\\Tag');
+    }
+
 
     protected $fillable =[
         'title',

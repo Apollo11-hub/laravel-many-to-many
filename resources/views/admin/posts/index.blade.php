@@ -14,6 +14,8 @@
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Title</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Tags</th>
                 <th class="" scope="col">Azioni</th>
             </tr>
         </thead>
@@ -22,8 +24,22 @@
 
                 <tr>
                     <th scope="row">{{$post->id}}</th>
+
                     <td>{{$post->title}}</td>
+
                     <td>{{$post->category ? $post->category->name : 'Not Avaible At Moment'}}</td>
+
+                    <td>
+
+
+                        @forelse ($post->tags as $tag)
+                        <span class="badge rounded-pill text-dark bg-light">{{$tag->tag_name}}</span>
+                        @empty
+                            <p>-</p>
+                        @endforelse
+
+                    </td>
+
                     <td class="d-flex">
                         <a type="button" class="btn btn-primary " href="{{route('admin.posts.show', $post)}}">SHOW</a>
                         <a type="button" class="btn btn-success mx-2" href="{{route('admin.posts.edit', $post)}}">EDIT</a>
@@ -35,7 +51,6 @@
 
                         <button type="submit" class="btn btn-danger" >DELETE</button>
                         </form>
-
                     </td>
 
                 </tr>
