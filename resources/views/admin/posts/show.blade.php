@@ -17,7 +17,7 @@
 
             @if ($post->tags)
                 @foreach ($post->tags as $tag)
-                <span class="badge rounded-pill text-light bg-primary">{{$tag->tag_name}}</span>
+                <span class="badge rounded-pill text-light bg-primary p-2">{{$tag->tag_name}}</span>
                 @endforeach
             @endif
 

@@ -17,7 +17,7 @@ class PostTableSeeder extends Seeder
             $new_post = new Post();
             $new_post->title = $faker->word();
             $new_post->slug = Post::slugGenerator($new_post->title);
-            $new_post->contenet = $faker->text();
+            $new_post->contenet = $faker->paragraph();
             $new_post->save();
         }
     }

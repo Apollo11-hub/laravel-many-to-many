@@ -25,7 +25,7 @@
                 <tr>
                     <th scope="row">{{$post->id}}</th>
 
-                    <td>{{$post->title}}</td>
+                    <td class="text-capitalize">{{$post->title}}</td>
 
                     <td>{{$post->category ? $post->category->name : 'Not Avaible At Moment'}}</td>
 
@@ -33,7 +33,7 @@
 
 
                         @forelse ($post->tags as $tag)
-                        <span class="badge rounded-pill text-dark bg-light">{{$tag->tag_name}}</span>
+                        <span class="badge rounded-pill text-dark bg-light p-2">{{$tag->tag_name}}</span>
                         @empty
                             <p>-</p>
                         @endforelse
@@ -67,7 +67,7 @@
             <h3>{{$category->name}}</h3>
                 <ul>
                     @forelse ($category->posts as $post)
-                        <li><a href="{{route('admin.posts.show', $post)}}">{{$post->title}}</a></li>
+                        <li><a class="text-capitalize" href="{{route('admin.posts.show', $post)}} ">{{$post->title}}</a></li>
                     @empty
                         <li>Non ci sono post in questa categoria</li>
                     @endforelse
