@@ -68,7 +68,7 @@
 
             <div class="mb-3">
 
-                @foreach ($tags as $tag )
+                @foreach ($post->tags as $tag )
                     <input type="checkbox"
                     name="tags[]"
                     id="tag{{$loop->iteration}}"
