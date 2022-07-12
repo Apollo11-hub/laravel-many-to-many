@@ -32,18 +32,18 @@ const app = new Vue({
 });
 
 
-$().ready(function(){
+// $().ready(function(){
 
 
 
-    $('form').submit(function(event){
-        $('#error-title').hide();
-        if($('#title').val().length === 0){
-            $('#error-title').show('slow').text('il titolo è obbligatorio').fadeOut(5000)
-        }
+//     $('form').submit(function(event){
+//         $('#error-title').hide();
+//         if($('#title').val().length === 0){
+//             $('#error-title').show('slow').text('il titolo è obbligatorio').fadeOut(5000)
+//         }
 
-        event.preventDefault();
+//         event.preventDefault();
 
-    })
+//     })
 
-});
+// });

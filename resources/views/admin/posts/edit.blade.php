@@ -65,6 +65,25 @@
                     <p class="text-danger">{{ $message }}</p>
                 @enderror
             </div>
+
+            <div class="mb-3">
+
+                @foreach ($tags as $tag )
+                    <input type="checkbox"
+                    name="tags[]"
+                    id="tag{{$loop->iteration}}"
+
+                    @if (in_array('$tag->id', old('tags',[])) || $post->tags->contains($tag->id))
+                        checked
+                    @endif
+
+                    value="{{$tag->id}}">
+                    <label class="mr-3" for="tag{{$loop->iteration}}">{{$tag->tag_name}}</label>
+                @endforeach
+
+            </div>
+
+
             <p>Tutti i campi con * sono da compilare</p>
             <div class="mb-3">
                 <button type="submit" class="btn btn-primary mb-3">Completa</button>

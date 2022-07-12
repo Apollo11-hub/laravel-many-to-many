@@ -49354,18 +49354,15 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
 
 var app = new Vue({
   el: '#app'
-});
-$().ready(function () {
-  $('form').submit(function (event) {
-    $('#error-title').hide();
-
-    if ($('#title').val().length === 0) {
-      $('#error-title').show('slow').text('il titolo è obbligatorio').fadeOut(5000);
-    }
-
-    event.preventDefault();
-  });
-});
+}); // $().ready(function(){
+//     $('form').submit(function(event){
+//         $('#error-title').hide();
+//         if($('#title').val().length === 0){
+//             $('#error-title').show('slow').text('il titolo è obbligatorio').fadeOut(5000)
+//         }
+//         event.preventDefault();
+//     })
+// });
 
 /***/ }),
 
@@ -49501,8 +49498,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\39347\Desktop\BooleanCareersN61\LARAVEL\laravel-one-to-many\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\39347\Desktop\BooleanCareersN61\LARAVEL\laravel-one-to-many\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\39347\Desktop\BooleanCareersN61\LARAVEL\laravel-many-to-many\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\39347\Desktop\BooleanCareersN61\LARAVEL\laravel-many-to-many\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
