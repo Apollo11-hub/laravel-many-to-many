@@ -15,7 +15,7 @@ class Post extends Model
     // Relazione many to many
 
     public function tags(){
-        return $this-> belongsToMany('App\\Tag');
+        return $this-> belongsToMany('App\Tag');
     }
 
 
